@@ -36,3 +36,9 @@ INSERT INTO SIRI.test VALUES ();
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
 SELECT * FROM SIRI.test;
+
+-- Doppelte DAtensätze werden zugelassen! 
+INSERT INTO SIRI.test(age,name) VALUES (35,"Alonzo");
+INSERT INTO SIRI.test(age,name) VALUES (35,"Alonzo");
+
+SELECT * FROM SIRI.test;
