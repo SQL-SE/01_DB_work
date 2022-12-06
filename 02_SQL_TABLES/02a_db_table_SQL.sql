@@ -1,5 +1,10 @@
 /* -----------Struckturen-------- */
 
+/*
+    NULL wird nicht mehr zugelassen
+    DEFAULT-Werte eintragen
+*/
+
 /* Datenbanken auf Server anzeigen */
 #SHOW DATABASES;
 
@@ -10,24 +15,24 @@ DROP DATABASE IF EXISTS SIRI;
 CREATE DATABASE IF NOT EXISTS SIRI;
 
 /* DB auswählen */
-USE SIRI;
+#USE SIRI;  -- SIRI.xxx
 
-CREATE TABLE IF NOT EXISTS test
+CREATE TABLE IF NOT EXISTS SIRI.test
 (
-    name VARCHAR(20),
-    age INT
+    name VARCHAR(20) NOT NULL DEFAULT "TBA",
+    age INT(3) NOT NULL DEFAULT 0
 );
 
 
 /* Alle Tabellen in der DB anzeigen */
-SHOW TABLES;
+#SHOW TABLES;
 
-DESCRIBE test;
+DESCRIBE SIRI.test;
 
 /* ----- Daten ------- */
-INSERT INTO test(name,age) VALUES ("Grizabella",29);
-INSERT INTO test(age,name) VALUES (35,"Alonzo");
-INSERT INTO test VALUES ();
+INSERT INTO SIRI.test(name,age) VALUES ("Grizabella",29);
+INSERT INTO SIRI.test(age,name) VALUES (35,"Alonzo");
+INSERT INTO SIRI.test VALUES ();
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
-SELECT * FROM test;
+SELECT * FROM SIRI.test;
