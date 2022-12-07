@@ -22,4 +22,4 @@ INSERT INTO boo.users(firstName,familyName,userName) VALUES ("Maxine","Mütze","
 INSERT INTO boo.users(firstName,familyName,userName) VALUES ("Max","Mützerich","max")
 
 /* Inhalte : Ergebnistabelle */
--- SELECT * FROM boo.users;
+SELECT * FROM boo.users;
