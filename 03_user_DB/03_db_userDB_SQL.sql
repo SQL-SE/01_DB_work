@@ -23,3 +23,5 @@ INSERT INTO boo.users(firstName,familyName,userName) VALUES ("Max","Mützerich",
 
 /* Inhalte : Ergebnistabelle */
 SELECT * FROM boo.users;
+
+/* test */
