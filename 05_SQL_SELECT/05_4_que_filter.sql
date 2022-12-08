@@ -23,14 +23,14 @@ FROM stocks.ccc
 -- Einzeldaten / Strings
 #WHERE sector = "Communication Services" -- spez. Sektor
 #WHERE industry = "Media" -- spez. Branche
-WHERE payouts = 12 -- Wer zahlt monatlich?
+#WHERE payouts = 12 -- Wer zahlt monatlich?
 
 -- Kombination durch AND
 #WHERE sector = "Communication Services" AND industry = "Entertainment"
 #WHERE sector = "Communication Services" AND payouts = 12
 
 -- Kombination durch AND / OR
-#WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
+WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
 
 -- Kombination durch AND / NOT
 #WHERE sector = "Communication Services" AND NOT industry = "Media"
