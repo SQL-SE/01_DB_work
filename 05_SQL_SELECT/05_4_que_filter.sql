@@ -10,7 +10,7 @@
 
 -- Eingrenzen/Filtern WHERE & AND/OR etc.
 -- Scharfe Suche
-/*
+/**/
 SELECT
 	ticker AS "SYM",
     c_name AS "Unternehmen",
@@ -23,7 +23,7 @@ FROM stocks.ccc
 -- Einzeldaten / Strings
 #WHERE sector = "Communication Services" -- spez. Sektor
 #WHERE industry = "Media" -- spez. Branche
-#WHERE payouts = 12 -- Wer zahlt monatlich?
+WHERE payouts = 12 -- Wer zahlt monatlich?
 
 -- Kombination durch AND
 #WHERE sector = "Communication Services" AND industry = "Entertainment"
@@ -33,15 +33,15 @@ FROM stocks.ccc
 #WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
 
 -- Kombination durch AND / NOT
-WHERE sector = "Communication Services" AND NOT industry = "Media"
+#WHERE sector = "Communication Services" AND NOT industry = "Media"
 
 -- Sortierung
-ORDER BY industry DESC 
-#ORDER BY price DESC 
+#ORDER BY industry DESC 
+ORDER BY price DESC 
 -- Begrenzung
 LIMIT 40
 ;
-*/
+
 
 -- Eingrenzen/Filtern WHERE & LIKE + Parameter
 -- Unscharfe Suche 
@@ -104,7 +104,7 @@ FROM stocks.ccc
 WHERE c_name RLIKE "^[1-9]"  -- mit Ziffer beginnend
 ORDER BY c_name;
 */
-
+/*
 -- Eingrenzen/Filtern WHERE & BETWEEN / NOT BETWEEN
 SELECT 
     ticker AS "SYM",
@@ -119,6 +119,6 @@ WHERE sector = "Financials" AND NOT (price BETWEEN 20.0 AND 250.0) -- Band rausf
 ORDER BY price DESC
 LIMIT 200 -- X Zeilen ab 0
 ;
-
+*/
 
 
