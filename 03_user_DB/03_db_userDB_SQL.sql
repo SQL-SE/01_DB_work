@@ -1,27 +1,26 @@
 /* USER DB Vers. 1 */
 
-
 /* DBs */
-DROP DATABASE IF EXISTS boo;
-CREATE DATABASE IF NOT EXISTS boo;
+DROP DATABASE IF EXISTS SIRI;
+CREATE DATABASE IF NOT EXISTS SIRI;
 
 /* Table users */
-DROP TABLE IF EXISTS boo.users;
-CREATE TABLE IF NOT EXISTS boo.users(
+DROP TABLE IF EXISTS SIRI.users;
+CREATE TABLE IF NOT EXISTS SIRI.users(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     userName VARCHAR(20) NOT NULL,
     familyName VARCHAR(20) NOT NULL,
     firstName VARCHAR(20) NOT NULL
 );
 
-DESCRIBE boo.users;
+DESCRIBE SIRI.users;
 
 /* Daten */
-INSERT INTO boo.users(firstName,familyName,userName) VALUES ("Max","Mütze","max");
-INSERT INTO boo.users(firstName,familyName,userName) VALUES ("Maxine","Mütze","maxine");
-INSERT INTO boo.users(firstName,familyName,userName) VALUES ("Max","Mützerich","max")
+INSERT INTO SIRI.users(firstName,familyName,userName) VALUES ("Max","Mütze","max");
+INSERT INTO SIRI.users(firstName,familyName,userName) VALUES ("Maxine","Mütze","maxine");
+INSERT INTO SIRI.users(firstName,familyName,userName) VALUES ("Max","Mützerich","max")
 
 /* Inhalte : Ergebnistabelle */
-SELECT * FROM boo.users;
+SELECT * FROM SIRI.users;
 
 /* test */
