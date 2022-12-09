@@ -33,13 +33,14 @@ ORDER BY Branchen DESC
 */
 
 -- welche VERSCHIEDENEN Auszahlungs-Rhythmen gibt es?
-/**/
+/*
 SELECT
     DISTINCT payouts "Auszahlungen p.a."
 FROM stocks.ccc
 ORDER BY payouts ASC
 ;
-
+*/
+/**/
 -- welche Unternehmen zahlen monatlich?
 SELECT
     industry Branche,
