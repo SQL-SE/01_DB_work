@@ -2,13 +2,13 @@
 
 -- Preis der teuersten/günstigsten Aktie?
 
-/**/
+/*
 SELECT
-    max(price) "Max. Preis"
+    #max(price) "Max. Preis"
     #min(price)  "Min. Preis"
 FROM stocks.ccc
 ;
-
+*/
 
 #SELECT max(price) "Max. Preis" FROM stocks.ccc;
 #SELECT min(price) "Min. Preis" FROM stocks.ccc;  
@@ -23,10 +23,12 @@ SELECT
     price AS "Kurs in $"
 FROM stocks.ccc
 -- SUBQUERY, hier: zeig mir den max./min. Wert / wichtig: (SELECT ...) !
-WHERE price = (SELECT max(price) "Max. Preis" FROM stocks.ccc)
-#WHERE price = (SELECT min(price) "Min. Preis" FROM stocks.ccc)
+#WHERE price = (SELECT max(price) "Max. Preis" FROM stocks.ccc)
+WHERE price = (SELECT min(price) "Min. Preis" FROM stocks.ccc)
 ;
+*/
 
+/*
 SELECT
     ticker SYM,
     c_name AS Unternehmen,
@@ -37,7 +39,7 @@ ORDER BY price DESC
 LIMIT 1
 ;
 */
-/*
+/**/
 -- Welches Unternehmen hat die längste Div.-Historie ?
 SELECT
     ticker AS "SYM",
@@ -47,5 +49,5 @@ FROM stocks.ccc
 ORDER BY no_yrs DESC
 LIMIT 1
 ;
-*/ 
+ 
 
